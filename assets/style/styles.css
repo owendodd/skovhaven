@@ -34,8 +34,6 @@ body .title {
 }
 
 header {
-  padding-top: 30px;
-  background-color: #f8f5f2;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,12 +44,18 @@ header h1 {
   margin: 0;
 }
 
+section.title {
+  padding: 30px 0;
+  background-color: #f8f5f2;
+}
+
 section.menu {
+  background-color: #f8f5f2;
   text-align: left;
 }
 
 section.menu h1 {
-  margin: 20px 0;
+  margin: 0 0 20px;
 }
 
 section.menu h1:first-of-type {
@@ -73,9 +77,21 @@ section.menu h1:last-of-type {
   background-repeat: repeat-x;
 }
 
+section.menu h1.collapsed {
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
 section.menu a {
   color: black;
   text-decoration: none;
+}
+
+.fade {
+  height: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f5f2), to(rgba(248, 245, 242, 0)));
+  background-image: linear-gradient(#f8f5f2, rgba(248, 245, 242, 0));
 }
 
 .content {
@@ -83,7 +99,6 @@ section.menu a {
 }
 
 section.two-col {
-  padding: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;

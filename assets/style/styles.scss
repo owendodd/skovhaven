@@ -33,8 +33,6 @@ body {
 
 // Header
 header {
-    padding-top: 30px;
-    background-color: #f8f5f2;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,11 +41,15 @@ header {
         margin: 0;
     }
 }
-
+section.title {
+    padding: 30px 0;
+    background-color: rgba(248, 245, 242, 1);
+}
 section.menu {
+    background-color: rgba(248, 245, 242, 1);
     text-align: left;
     h1 {
-        margin: 20px 0;
+        margin: 0 0 20px;
         &:first-of-type {
             padding-top: 20px;
             background-image: linear-gradient(to right, black 40%, rgba(255,255,255,0) 0%);
@@ -63,19 +65,28 @@ section.menu {
             background-size: 6px 2px;
             background-repeat: repeat-x;
         }
+        &.collapsed {
+            height: 0;
+            overflow: hidden;
+            display: none;
+        } 
     }
     a {
         color: black;
         text-decoration: none;
     }
 }
+.fade {
+    height: 30px;
+    background-image: linear-gradient(rgba(248, 245, 242, 1), rgba(248, 245, 242, 0));
+}
+
 
 // Layout
 .content {
     margin-top: 300px;
 }
 section.two-col {
-    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
