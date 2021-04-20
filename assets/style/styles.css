@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Quadrant Duo Slab";
+  src: url(/assets/style/webfonts/QuadrantSlabDuoTrial-Thin.woff);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f5f2;
+  margin: 0;
+}
+
+body {
+  font-family: "Quadrant Duo Slab", "Courier New", Courier, monospace;
+  font-size: 18px;
+}
+
+body p {
+  line-height: 1.6em;
+  margin: 10px auto;
+}
+
+body h1 {
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+}
+
+body .title {
+  text-align: center;
+}
+
+header {
+  padding-top: 30px;
+  background-color: #f8f5f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+section.menu {
+  text-align: left;
+}
+
+section.menu h1 {
+  margin: 20px 0;
+}
+
+section.menu h1:first-of-type {
+  padding-top: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, black), color-stop(0%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+}
+
+section.menu h1:last-of-type {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, black), color-stop(0%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+}
+
+section.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 300px;
+}
+
+section.two-col {
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  margin: 0 30px;
+}
+
+section.two-col div {
+  grid-column: span 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section.two-col p {
+  max-width: 40em;
+}
+
+section.ten-col {
+  margin: 60px 30px;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  row-gap: 30px;
+}
+
+section.ten-col img {
+  width: 100%;
+  border: 5px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section.ten-col img.writing {
+  border: none;
+  width: 60%;
+}
+
+section.ten-col .writing-wrap {
+  display: inline-block;
+}
+/*# sourceMappingURL=styles.css.map */

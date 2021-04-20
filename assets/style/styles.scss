@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Quadrant Duo Slab";
+    src: url(/assets/style/webfonts/QuadrantSlabDuoTrial-Thin.woff);
+}
+
+// Base
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f8f5f2;
+    margin: 0;
+}
+
+// Type
+body {
+    font-family: "Quadrant Duo Slab", "Courier New", Courier, monospace;
+    font-size: 18px;
+    p {
+        line-height: 1.6em;
+        margin: 10px auto;
+    }
+    h1 {
+        font-size: 18px;
+        font-weight: normal;
+        letter-spacing: 0.05em;
+        margin: 0 0 20px;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+// Header
+header {
+    padding-top: 30px;
+    background-color: #f8f5f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    h1 {
+        margin: 0;
+    }
+}
+
+section.menu {
+    text-align: left;
+    h1 {
+        margin: 20px 0;
+        &:first-of-type {
+            padding-top: 20px;
+            background-image: linear-gradient(to right, black 40%, rgba(255,255,255,0) 0%);
+            background-position: top;
+            background-size: 6px 2px;
+            background-repeat: repeat-x;
+        }
+        &:last-of-type {
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            background-image: linear-gradient(to right, black 40%, rgba(255,255,255,0) 0%);
+            background-position: bottom;
+            background-size: 6px 2px;
+            background-repeat: repeat-x;
+        }
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+// Layout
+.content {
+    margin-top: 300px;
+}
+section.two-col {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    margin: 0 30px;
+    div {
+        grid-column: span 1;
+        width: 100%;
+        margin: 0 auto;
+    }
+    p {
+        max-width: 40em;
+    }
+}
+
+// Images
+section.ten-col {
+    margin: 60px 30px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 30px;
+    img {
+        width: 100%;
+        border: 5px solid white;
+        box-sizing: border-box;
+        &.writing {
+            border: none;
+            width: 60%;
+        }
+    }
+    .writing-wrap {
+        display: inline-block;
+    }
+}
