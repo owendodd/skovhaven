@@ -19,7 +19,7 @@ body {
 
 body p {
   line-height: 1.6em;
-  margin: 10px auto;
+  margin: 0;
 }
 
 body h1 {
@@ -31,6 +31,18 @@ body h1 {
 
 body .title {
   text-align: center;
+}
+
+body .title div:first-of-type {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / span 2;
+}
+
+body .title div:last-of-type {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 2;
+  grid-column: 7 / span 2;
 }
 
 header {
@@ -46,56 +58,46 @@ header h1 {
 
 section.title {
   padding: 30px 0;
-  background-color: #f8f5f2;
-}
-
-section.menu {
-  background-color: #f8f5f2;
-  text-align: left;
-}
-
-section.menu h1 {
-  margin: 0 0 20px;
-}
-
-section.menu h1:first-of-type {
-  padding-top: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, black), color-stop(0%, rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 0%);
-  background-position: top;
-  background-size: 6px 2px;
-  background-repeat: repeat-x;
-}
-
-section.menu h1:last-of-type {
-  padding-bottom: 20px;
-  margin-bottom: 0;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, black), color-stop(0%, rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 0%);
-  background-position: bottom;
-  background-size: 6px 2px;
-  background-repeat: repeat-x;
-}
-
-section.menu h1.collapsed {
-  height: 0;
-  overflow: hidden;
-  display: none;
-}
-
-section.menu a {
-  color: black;
-  text-decoration: none;
-}
-
-.fade {
-  height: 30px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f5f2), to(rgba(248, 245, 242, 0)));
-  background-image: linear-gradient(#f8f5f2, rgba(248, 245, 242, 0));
 }
 
 .content {
-  margin-top: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content img {
+  height: 60vh;
+  width: auto;
+  border: 5px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px 0;
+}
+
+.content p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.content p a {
+  color: black;
 }
 
 section.two-col {
@@ -116,6 +118,7 @@ section.two-col div {
 
 section.two-col p {
   max-width: 40em;
+  margin: 0;
 }
 
 section.ten-col {
