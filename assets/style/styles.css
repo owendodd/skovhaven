@@ -22,50 +22,16 @@ body p {
   margin: 0;
 }
 
-body h1 {
-  font-size: 18px;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  margin: 0 0 20px;
-}
-
-body .title {
-  text-align: center;
-}
-
-body .title div:first-of-type {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-column: 3 / span 2;
-}
-
-body .title div:last-of-type {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 2;
-  grid-column: 7 / span 2;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-header h1 {
-  margin: 0;
-}
-
-section.title {
-  padding: 30px 0;
-}
-
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -74,15 +40,19 @@ section.title {
           align-items: center;
 }
 
-.content img {
-  height: 60vh;
+.content section {
+  margin: 20px 40px;
+}
+
+.content section img {
+  max-height: 70vh;
   width: auto;
   border: 5px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.content div {
+.content section div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,59 +63,26 @@ section.title {
 
 .content p {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 0;
 }
 
 .content p a {
   color: black;
 }
 
-section.two-col {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 60px;
-          column-gap: 60px;
-  margin: 0 30px;
+.footer {
+  margin: auto 30px 30px auto;
 }
 
-section.two-col div {
-  grid-column: span 1;
-  width: 100%;
-  margin: 0 auto;
+.footer a {
+  color: black;
+  margin: 0 5px;
+  vertical-align: bottom;
 }
 
-section.two-col p {
-  max-width: 40em;
-  margin: 0;
-}
-
-section.ten-col {
-  margin: 60px 30px;
-  padding: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -webkit-column-gap: 60px;
-          column-gap: 60px;
-  row-gap: 30px;
-}
-
-section.ten-col img {
-  width: 100%;
-  border: 5px solid white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-section.ten-col img.writing {
-  border: none;
-  width: 60%;
-}
-
-section.ten-col .writing-wrap {
-  display: inline-block;
+@media only screen and (max-width: 600px) {
+  .footer {
+    margin: 60px auto 30px auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

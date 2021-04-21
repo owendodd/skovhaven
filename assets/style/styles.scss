@@ -20,37 +20,6 @@ body {
         line-height: 1.6em;
         margin: 0;
     }
-    h1 {
-        font-size: 18px;
-        font-weight: normal;
-        letter-spacing: 0.05em;
-        margin: 0 0 20px;
-    }
-    .title {
-        text-align: center;
-        div {
-            &:first-of-type {
-                grid-column: 3 / span 2;
-            }
-            &:last-of-type {
-                grid-column: 7 / span 2;
-            }
-        }
-    }
-}
-
-// Header
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    h1 {
-        margin: 0;
-    }
-}
-section.title {
-    padding: 30px 0;
 }
 
 
@@ -58,63 +27,47 @@ section.title {
 // Layout
 .content {
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
-    img {
-        height: 60vh;
-        width: auto;
-        border: 5px solid white;
-        box-sizing: border-box;
+    section {
+        margin: 20px 40px; 
+        img {
+            max-height: 70vh;
+            width: auto;
+            border: 5px solid white;
+            box-sizing: border-box;
+        }
+        div {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
     }
-    div {
-        display: flex;
-        justify-content: space-around;
-        margin: 30px 0;
-    }
+    
     p {
         text-align: center;
-        margin: 20px 0;
+        margin: 20px 0 0;
         a {
             color: black;
         }
     }
 }
-section.two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    margin: 0 30px;
-    div {
-        grid-column: span 1;
-        width: 100%;
-        margin: 0 auto;
-    }
-    p {
-        max-width: 40em;
-        margin: 0;
+
+.footer {
+    margin: auto 30px 30px auto;
+    a {
+        color: black;
+        margin: 0 5px;
+        vertical-align: bottom;
     }
 }
 
-// Images
-section.ten-col {
-    margin: 60px 30px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 30px;
-    img {
-        width: 100%;
-        border: 5px solid white;
-        box-sizing: border-box;
-        &.writing {
-            border: none;
-            width: 60%;
-        }
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        margin: 60px auto 30px auto;
     }
-    .writing-wrap {
-        display: inline-block;
-    }
-}
+  }
