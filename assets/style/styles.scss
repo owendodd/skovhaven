@@ -43,10 +43,10 @@ header {
 }
 section.title {
     padding: 30px 0;
-    background-color: rgba(248, 245, 242, 1);
+    // background-color: rgba(248, 245, 242, 1);
 }
 section.menu {
-    background-color: rgba(248, 245, 242, 1);
+    // background-color: rgba(248, 245, 242, 1);
     text-align: left;
     h1 {
         margin: 0 0 20px;
@@ -76,10 +76,7 @@ section.menu {
         text-decoration: none;
     }
 }
-.fade {
-    height: 30px;
-    background-image: linear-gradient(rgba(248, 245, 242, 1), rgba(248, 245, 242, 0));
-}
+
 
 
 // Layout

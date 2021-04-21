@@ -1,9 +1,9 @@
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > 50) {
-        $('menu > h1').addClass('collapsed');
+        $('.menu').fadeOut();
     }
     else
     {
-        $('menu > h1').removeClass('collapsed');
+        $('.menu').fadeIn();
     }
 });
