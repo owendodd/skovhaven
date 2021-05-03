@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Quadrant Duo Slab";
-  src: url(/assets/style/webfonts/QuadrantSlabDuoTrial-Thin.woff);
+  src: url(/assets/style/webfonts/QuadrantSlabDuo-Thin.woff2);
 }
 
 html {
@@ -12,9 +12,14 @@ body {
   margin: 0;
 }
 
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Quadrant Duo Slab", "Courier New", Courier, monospace;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body p {
@@ -22,11 +27,21 @@ body p {
   margin: 10px auto;
 }
 
-body h1 {
+body h1, body h3 {
   font-size: 18px;
+  text-align: center;
   font-weight: normal;
   letter-spacing: 0.05em;
   margin: 0 0 20px;
+}
+
+body h2 {
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 30px;
 }
 
 body .title {
@@ -35,6 +50,7 @@ body .title {
 
 header {
   position: fixed;
+  background-color: #f8f5f2;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,45 +61,46 @@ header h1 {
 }
 
 section.title {
-  padding: 30px 0;
+  margin-top: 30px;
+}
+
+section.title div {
+  margin-bottom: 0 !important;
 }
 
 section.menu {
   text-align: left;
 }
 
-section.menu h1 {
-  margin: 0 0 20px;
+section.menu h2 {
+  margin: 15px 0;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  opacity: 1;
+  height: auto;
 }
 
-section.menu h1:first-of-type {
-  padding-top: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, black), color-stop(0%, rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 0%);
-  background-position: top;
-  background-size: 6px 2px;
-  background-repeat: repeat-x;
-}
-
-section.menu h1:last-of-type {
-  padding-bottom: 20px;
-  margin-bottom: 0;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, black), color-stop(0%, rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 0%);
-  background-position: bottom;
-  background-size: 6px 2px;
-  background-repeat: repeat-x;
-}
-
-section.menu h1.collapsed {
+section.menu h2.hide {
+  opacity: 0;
   height: 0;
-  overflow: hidden;
-  display: none;
+  margin: 0;
+}
+
+section.menu h2.label {
+  cursor: pointer;
 }
 
 section.menu a {
   color: black;
   text-decoration: none;
+}
+
+section.menu div {
+  padding: 0 15px;
+  border-left: 1px solid black;
+  -webkit-transition: height 0.4s ease-out;
+  transition: height 0.4s ease-out;
+  margin-bottom: 0 !important;
 }
 
 .content {
@@ -97,44 +114,43 @@ section.two-col {
       grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 60px;
           column-gap: 60px;
-  margin: 0 30px;
 }
 
 section.two-col div {
   grid-column: span 1;
-  width: 100%;
-  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
-section.two-col p {
-  max-width: 40em;
+section.two-col div div {
+  padding: 0 15px;
+  border-left: 1px solid black;
+}
+
+section.two-col div div h3:last-of-type {
+  margin-top: 30px;
 }
 
 section.ten-col {
-  margin: 60px 30px;
-  padding: 0;
+  padding: 40px 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 60px;
           column-gap: 60px;
-  row-gap: 30px;
+  row-gap: 60px;
 }
 
-section.ten-col img {
+section.ten-col div {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.ten-col div img {
   width: 100%;
   border: 5px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-section.ten-col img.writing {
-  border: none;
-  width: 60%;
-}
-
-section.ten-col .writing-wrap {
-  display: inline-block;
 }
 /*# sourceMappingURL=styles.css.map */
