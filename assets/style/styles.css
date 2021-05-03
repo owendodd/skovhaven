@@ -50,10 +50,11 @@ body .title {
 
 header {
   position: fixed;
-  background-color: #f8f5f2;
+  background: linear-gradient(0deg, rgba(248, 245, 242, 0) 0px, #f8f5f2 17px, #f8f5f2 100%);
   top: 0;
   left: 0;
   width: 100%;
+  padding-bottom: 5px;
 }
 
 header h1 {
