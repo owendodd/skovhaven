@@ -28,9 +28,10 @@ function hideMenu() {
 function showMenu() {
     menuItems.removeClass('hide');
     label.addClass('hide');
-    setTimeout(function () {
-        menuBox.height(160);
-    }, 50);
+    menuBox.height(160);
+    // setTimeout(function () {
+        
+    // }, 50);
 };
 
 function changeLabel(point) {
