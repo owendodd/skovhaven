@@ -10,7 +10,6 @@ html {
 body {
     background-color: #f8f5f2;
     margin: 0;
-    padding: 0 20px;
 }
 section {
     max-width: 1400px;
@@ -61,8 +60,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    width: calc(100vw - 40px);
-    margin: 0 auto;
+    max-width: calc(100vw - 40px);
+    margin: 0 20px;
     padding-bottom: 20px;
     h1 {
         margin: 0;
@@ -116,7 +115,7 @@ section.menu {
 
 // Layout
 .content {
-    margin-top: 300px;
+    margin: 300px 20px 0;
 }
 section.two-col {
     display: grid;
@@ -143,21 +142,60 @@ section.two-col {
 
 // Images
 section.ten-col {
-    padding: 40px 0;
-    margin: 20px auto 80px;
+    padding-top: 40px;
+    margin-bottom: 80px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     column-gap: 60px;
     row-gap: 60px;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
     div {
         align-self: center;
         img {
             width: 100%;
             border: 5px solid white;
             box-sizing: border-box;
+        }
+        &.hor {
+            grid-column: span 4;
+        }
+        &.ver {
+            grid-column: span 3;
+        }
+        &.space1{
+            grid-column: span 1;
+        }
+        &.space2 {
+            grid-column: span 2;
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .dk {
+        display: none;
+    }
+
+    .content > section.two-col {
+        div {
+            grid-column: span 2;
+        }
+    }
+
+    section.ten-col {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        div {
+            &.hor {
+                grid-column: span 4;
+            }
+            &.ver {
+                grid-column: span 3;
+            }
+            .space1, .space2 {
+                grid-column: span 1;
+            }
         }
     }
 }

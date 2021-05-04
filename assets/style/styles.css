@@ -10,7 +10,6 @@ html {
 body {
   background-color: #f8f5f2;
   margin: 0;
-  padding: 0 20px;
 }
 
 section {
@@ -60,8 +59,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  width: calc(100vw - 40px);
-  margin: 0 auto;
+  max-width: calc(100vw - 40px);
+  margin: 0 20px;
   padding-bottom: 20px;
 }
 
@@ -133,7 +132,7 @@ section.menu div {
 }
 
 .content {
-  margin-top: 300px;
+  margin: 300px 20px 0;
 }
 
 section.two-col {
@@ -169,8 +168,8 @@ section.two-col div div ul li {
 }
 
 section.ten-col {
-  padding: 40px 0;
-  margin: 20px auto 80px;
+  padding-top: 40px;
+  margin-bottom: 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -ms-grid;
@@ -181,7 +180,6 @@ section.ten-col {
           column-gap: 60px;
   row-gap: 60px;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 section.ten-col div {
@@ -195,5 +193,43 @@ section.ten-col div img {
   border: 5px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+section.ten-col div.hor {
+  grid-column: span 4;
+}
+
+section.ten-col div.ver {
+  grid-column: span 3;
+}
+
+section.ten-col div.space1 {
+  grid-column: span 1;
+}
+
+section.ten-col div.space2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 1000px) {
+  .dk {
+    display: none;
+  }
+  .content > section.two-col div {
+    grid-column: span 2;
+  }
+  section.ten-col {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  section.ten-col div.hor {
+    grid-column: span 4;
+  }
+  section.ten-col div.ver {
+    grid-column: span 3;
+  }
+  section.ten-col div .space1, section.ten-col div .space2 {
+    grid-column: span 1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
