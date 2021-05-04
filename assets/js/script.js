@@ -1,5 +1,5 @@
 var menuBox     = $('.menu div'),
-    menuItems   = $('.menu h2').not('.label'),
+    menuItems   = $('.menu h2'),
     label       = $('.menu h2.label'),
     headerPoint = $("section.point");
 
@@ -13,38 +13,35 @@ $(window).scroll(function () {
     }
 });
 
-label.click(function () {
+menuBox.mouseenter(function () {
     showMenu();
 });
 
 function hideMenu() {
     menuItems.addClass('hide');
-    label.removeClass('hide');
-    setTimeout(function () {
-        menuBox.height(44);
-    }, 50);
 };
 
 function showMenu() {
     menuItems.removeClass('hide');
-    label.addClass('hide');
-    menuBox.height(160);
-    // setTimeout(function () {
-        
-    // }, 50);
 };
 
 function changeLabel(point) {
-    var     section = $(point),
-            dkTitle = section.find('.dk>h2').text(),
-            enTitle = section.find('.en>h2').text(),
-            dkMenu  = $('.dk>h2.label'),
-            enMenu  = $('.en>h2.label');
+    var     section     = $(point),
+            id          = section.attr('id'),
+            thisClass   = '.'+id,
+            active      = menuBox.find(thisClass),
+            other       = menuBox.find('h2').not(thisClass);
+            
+            other.removeClass('active').addClass('hide');
+            active.removeClass('hide').addClass('active');
+            
+            // dkMenu  = $('.dk>h2.label'),
+            // enMenu  = $('.en>h2.label');
 
-            enMenu.text(enTitle);
-            dkMenu.text(dkTitle);
+            // enMenu.text(enTitle);
+            // dkMenu.text(dkTitle);
 
-            console.log(section);
+            console.log(thisClass);
 } 
 
 headerPoint.waypoint({
