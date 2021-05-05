@@ -1,7 +1,11 @@
 var menuBox     = $('.menu div'),
     menuItems   = $('.menu h2'),
     label       = $('.menu h2.label'),
-    headerPoint = $("section.point");
+    headerPoint = $("section.point"),
+    toggleDK    = $('.toggleDK'),
+    toggleEN    = $('.toggleEN'),
+    langEN      = $('.en'),
+    langDK      = $('.dk');
 
 $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
@@ -34,14 +38,6 @@ function changeLabel(point) {
             
             other.removeClass('active').addClass('hide');
             active.removeClass('hide').addClass('active');
-            
-            // dkMenu  = $('.dk>h2.label'),
-            // enMenu  = $('.en>h2.label');
-
-            // enMenu.text(enTitle);
-            // dkMenu.text(dkTitle);
-
-            console.log(thisClass);
 } 
 
 headerPoint.waypoint({
@@ -63,3 +59,14 @@ headerPoint.waypoint({
         return -this.element.clientHeight
       }
   });
+
+
+toggleDK.click( function() {
+    langDK.css('display', 'block');
+    langEN.css('display', 'none');
+});
+
+toggleEN.click( function() {
+    langEN.css('display', 'block');
+    langDK.css('display', 'none');
+});

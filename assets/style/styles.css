@@ -61,7 +61,7 @@ header {
   right: 0;
   max-width: calc(100vw - 40px);
   margin: 0 20px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 }
 
 header h1 {
@@ -88,11 +88,14 @@ section.menu h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 40px;
 }
 
@@ -109,6 +112,22 @@ section.menu h2.label {
 section.menu h2.active {
   opacity: 1;
   height: 40px;
+}
+
+section.menu h2.toggle {
+  display: none;
+}
+
+section.menu h2.toggle span {
+  cursor: pointer;
+}
+
+section.menu h2.toggle span:first-of-type {
+  margin-right: 15px;
+}
+
+section.menu h2.toggle span:last-of-type {
+  margin-left: 15px;
 }
 
 section.menu a {
@@ -132,7 +151,7 @@ section.menu div {
 }
 
 .content {
-  margin: 300px 20px 0;
+  margin: 260px 20px 0;
 }
 
 section.two-col {
@@ -212,10 +231,21 @@ section.ten-col div.space2 {
 }
 
 @media (max-width: 1000px) {
+  section.menu {
+    margin-top: 10px;
+  }
+  section.menu .toggle {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   .dk {
     display: none;
   }
-  .content > section.two-col div {
+  .content {
+    margin-top: 310px;
+  }
+  .content section.two-col div {
     grid-column: span 2;
   }
   section.ten-col {
