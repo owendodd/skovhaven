@@ -46,6 +46,10 @@ body {
     .title {
         text-align: center;
     }
+    a {
+        color: black;
+        text-decoration: underline;
+    }
 }
 
 // Header
@@ -149,6 +153,14 @@ section.two-col {
                     line-height: 1.8em;
                 }
             }
+            &.button {
+                text-align: center;
+                margin-top: 30px;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 30px;
+                color: black;
+            }
         }
     }
 }
@@ -182,8 +194,28 @@ section.ten-col {
         &.space2 {
             grid-column: span 2;
         }
+        &.space4 {
+            grid-column: span 4;
+        }
     }
 }
+
+
+// Footer
+
+footer {
+    text-align: center;
+    img {
+        width: 100%;
+        max-width: 300px;
+        margin: 40px auto 40px;
+    }
+    a {
+        color: black;
+        margin: 10px;
+    }
+}
+
 
 
 @media (max-width: 1000px) {

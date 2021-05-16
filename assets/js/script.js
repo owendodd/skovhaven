@@ -40,7 +40,9 @@ function changeLabel(point) {
             
             other.removeClass('active').addClass('hide');
             active.removeClass('hide').addClass('active');
-} 
+
+            console.log(active, other);
+}; 
 
 headerPoint.waypoint({
   handler: function(direction) {

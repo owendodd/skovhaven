@@ -53,6 +53,11 @@ body .title {
   text-align: center;
 }
 
+body a {
+  color: black;
+  text-decoration: underline;
+}
+
 header {
   position: fixed;
   background: linear-gradient(0deg, rgba(248, 245, 242, 0) 0px, #f8f5f2 20px, #f8f5f2 100%);
@@ -186,6 +191,15 @@ section.two-col div div ul li {
   line-height: 1.8em;
 }
 
+section.two-col div div.button {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
+}
+
 section.ten-col {
   padding-top: 40px;
   margin-bottom: 80px;
@@ -228,6 +242,25 @@ section.ten-col div.space1 {
 
 section.ten-col div.space2 {
   grid-column: span 2;
+}
+
+section.ten-col div.space4 {
+  grid-column: span 4;
+}
+
+footer {
+  text-align: center;
+}
+
+footer img {
+  width: 100%;
+  max-width: 300px;
+  margin: 40px auto 40px;
+}
+
+footer a {
+  color: black;
+  margin: 10px;
 }
 
 @media (max-width: 1000px) {
