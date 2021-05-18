@@ -200,6 +200,29 @@ section.two-col div div.button {
   color: black;
 }
 
+section.two-col div div a {
+  text-decoration: none;
+}
+
+section.two-col div div a:hover {
+  color: gray;
+}
+
+section.two-col.dk, section.two-col .en {
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+section.two-col.dk .fade, section.two-col .en .fade {
+  opacity: 0.4;
+}
+
+#about, #house, #staying, #dining, #reserve {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
 section.ten-col {
   padding-top: 40px;
   margin-bottom: 80px;
@@ -212,7 +235,6 @@ section.ten-col {
   -webkit-column-gap: 60px;
           column-gap: 60px;
   row-gap: 60px;
-  border-top: 1px solid black;
 }
 
 section.ten-col div {

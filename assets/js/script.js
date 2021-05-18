@@ -7,7 +7,6 @@ var menuBox     = $('.menu div'),
     langEN      = $('.en'),
     langDK      = $('.dk');
 
-document.addEventListener("DOMContentLoaded", yall);
 
 $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {

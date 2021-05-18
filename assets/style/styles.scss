@@ -161,8 +161,25 @@ section.two-col {
                 border-radius: 30px;
                 color: black;
             }
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: gray;
+                }
+            }
         }
     }
+    &.dk, .en {
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+        .fade {
+            opacity: 0.4;
+        }
+    }
+}
+#about, #house, #staying, #dining, #reserve {
+    padding-top: 100px;
+    margin-top: -100px;
 }
 
 // Images
@@ -174,7 +191,6 @@ section.ten-col {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     column-gap: 60px;
     row-gap: 60px;
-    border-top: 1px solid black;
     div {
         align-self: center;
         img {
