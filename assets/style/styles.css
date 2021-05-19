@@ -67,6 +67,7 @@ header {
   max-width: calc(100vw - 40px);
   margin: 0 20px;
   padding-bottom: 22px;
+  z-index: 1000;
 }
 
 header h1 {
@@ -208,14 +209,14 @@ section.two-col div div a:hover {
   color: gray;
 }
 
-section.two-col.dk, section.two-col .en {
+section.two-col .dk, section.two-col .en {
   opacity: 1;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
-section.two-col.dk .fade, section.two-col .en .fade {
-  opacity: 0.4;
+section.two-col .dk.fade, section.two-col .en.fade {
+  opacity: 0.3;
 }
 
 #about, #house, #staying, #dining, #reserve {

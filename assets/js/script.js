@@ -39,8 +39,6 @@ function changeLabel(point) {
             
             other.removeClass('active').addClass('hide');
             active.removeClass('hide').addClass('active');
-
-            console.log(active, other);
 }; 
 
 headerPoint.waypoint({
@@ -72,4 +70,23 @@ toggleDK.click( function() {
 toggleEN.click( function() {
     langEN.css('display', 'block');
     langDK.css('display', 'none');
+});
+
+$("body").on("mousemove",function(event) {
+    var half=$(this).width()/2,
+        dk  =$('.content section.two-col .dk'),
+        en  =$('.content section.two-col .en');
+
+    if (event.pageX < half) {
+        dk.addClass('fade');
+        en.removeClass('fade');
+
+        console.log("left");
+    }
+    else {
+        en.addClass('fade');
+        dk.removeClass('fade');
+
+        console.log("right");
+    }
 });
