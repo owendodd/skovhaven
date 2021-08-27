@@ -66,7 +66,7 @@ header {
 
 section.title {
   position: absolute;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 section.title div {
@@ -75,7 +75,7 @@ section.title div {
 
 section.menu {
   text-align: left;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 section.menu h2 {
@@ -214,41 +214,32 @@ section.two-col h2.button:hover {
   opacity: 0.3;
 }
 
-.content .dk,
-.content .en {
+.content .dk, .content .en {
   max-width: 48em;
   opacity: 1;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
 
-.content .dk.fade,
-.content .en.fade {
+.content .dk.fade, .content .en.fade {
   opacity: 0.3;
 }
 
-.menu .dk,
-.menu .en {
+.menu .dk, .menu .en {
   opacity: 1;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
 
-.menu .dk.fade,
-.menu .en.fade {
+.menu .dk.fade, .menu .en.fade {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.menu .dk.fade a,
-.menu .en.fade a {
+.menu .dk.fade a, .menu .en.fade a {
   color: rgba(0, 0, 0, 0.3) !important;
 }
 
-#about,
-#house,
-#staying,
-#dining,
-#reserve {
+#about, #house, #staying, #dining, #reserve {
   padding-top: 100px;
   margin-top: -100px;
 }
@@ -350,8 +341,7 @@ footer a {
   section.ten-col div.ver {
     grid-column: span 3;
   }
-  section.ten-col div .space1,
-  section.ten-col div .space2 {
+  section.ten-col div .space1, section.ten-col div .space2 {
     grid-column: span 1;
   }
 }

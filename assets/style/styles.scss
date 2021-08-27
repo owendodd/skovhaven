@@ -23,7 +23,7 @@ body {
         line-height: 1.8em;
         margin: 10px auto;
     }
-    h1 {
+    h1{
         font-size: 18px;
         text-align: left;
         font-weight: normal;
@@ -67,14 +67,14 @@ header {
 }
 section.title {
     position: absolute;
-    margin-top: 60px;
+    margin-top: 20px;
     div {
         margin-bottom: 0 !important;
     }
 }
 section.menu {
     text-align: left;
-    margin-top: 60px;
+    margin-top: 20px;
     h2 {
         margin: 0;
         transition: all 300ms cubic-bezier(0.11, 0.57, 0.45, 1.06);
@@ -162,23 +162,23 @@ section.two-col {
         }
     }
     h2.button {
-        text-align: center;
-        margin: 30px 0 0;
-        display: inline-block;
-        padding: 10px 20px;
-        border: 1px solid black;
-        border-radius: 30px;
-        color: black;
-        opacity: 1;
+            text-align: center;
+            margin: 30px 0 0;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 30px;
+            color: black;
+            opacity: 1;
         transition: all 400ms ease-in-out;
-        &:hover {
-            opacity: 0.3;
-        }
+            &:hover {
+                opacity: 0.3;
+            }
     }
+    
 }
-.content {
-    .dk,
-    .en {
+.content{
+    .dk, .en {
         max-width: 48em;
         opacity: 1;
         transition: all 400ms ease-in-out;
@@ -189,12 +189,11 @@ section.two-col {
 }
 
 .menu {
-    .dk,
-    .en {
+    .dk, .en {
         opacity: 1;
         transition: all 400ms ease-in-out;
         &.fade {
-            border: 1px solid rgba(0, 0, 0, 0.3);
+            border:1px solid rgba(0, 0, 0, 0.3);
             a {
                 color: rgba(0, 0, 0, 0.3) !important;
             }
@@ -202,14 +201,12 @@ section.two-col {
     }
 }
 
-#about,
-#house,
-#staying,
-#dining,
-#reserve {
+
+#about, #house, #staying, #dining, #reserve {
     padding-top: 100px;
     margin-top: -100px;
 }
+
 
 // Images
 section.images.ten-col {
@@ -237,7 +234,7 @@ section.images.ten-col {
         &.ver {
             grid-column: span 3;
         }
-        &.space1 {
+        &.space1{
             grid-column: span 1;
         }
         &.space2 {
@@ -248,6 +245,7 @@ section.images.ten-col {
         }
     }
 }
+
 
 // Footer
 
@@ -264,6 +262,8 @@ footer {
     }
 }
 
+
+
 @media (max-width: 1000px) {
     section.menu {
         margin-top: 10px;
@@ -271,18 +271,18 @@ footer {
             display: flex !important;
         }
     }
-
+    
     .dk {
         display: none;
     }
 
-    .content {
+    .content  {
         margin-top: 310px;
         section.two-col {
             div {
                 grid-column: span 2;
             }
-        }
+        } 
     }
 
     section.ten-col {
@@ -294,8 +294,7 @@ footer {
             &.ver {
                 grid-column: span 3;
             }
-            .space1,
-            .space2 {
+            .space1, .space2 {
                 grid-column: span 1;
             }
         }
