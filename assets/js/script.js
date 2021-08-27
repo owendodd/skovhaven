@@ -1,6 +1,5 @@
 var menuBox     = $('.menu div'),
     menuItems   = $('.menu h2'),
-    label       = $('.menu h2.label'),
     headerPoint = $("section.point"),
     toggleDK    = $('.toggleDK'),
     toggleEN    = $('.toggleEN'),
@@ -14,7 +13,6 @@ $(window).scroll(function () {
     }
     else {
         showMenu();
-        label.text('menu');
     }
 });
 
@@ -74,8 +72,8 @@ toggleEN.click( function() {
 
 $("body").on("mousemove",function(event) {
     var half=$(this).width()/2,
-        dk  =$('.content section.two-col .dk'),
-        en  =$('.content section.two-col .en');
+        dk  =$('div.dk'),
+        en  =$('div.en');
 
     if (event.pageX < half) {
         dk.addClass('fade');

@@ -13,8 +13,7 @@ body {
 }
 
 section {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 0;
 }
 
 body {
@@ -29,10 +28,10 @@ body p {
 
 body h1 {
   font-size: 18px;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   letter-spacing: 0.05em;
-  margin: 0 0 20px;
+  margin: 0 15px 0;
 }
 
 body h2 {
@@ -49,10 +48,6 @@ body h3 {
   font-weight: normal;
 }
 
-body .title {
-  text-align: center;
-}
-
 body a {
   color: black;
   text-decoration: underline;
@@ -60,22 +55,18 @@ body a {
 
 header {
   position: fixed;
-  background: linear-gradient(0deg, rgba(248, 245, 242, 0) 0px, #f8f5f2 20px, #f8f5f2 100%);
   top: 0;
   left: 0;
   right: 0;
   max-width: calc(100vw - 40px);
   margin: 0 20px;
-  padding-bottom: 22px;
+  padding-bottom: 4px;
   z-index: 1000;
 }
 
-header h1 {
-  margin: 0;
-}
-
 section.title {
-  margin-top: 20px;
+  position: absolute;
+  margin-top: 60px;
 }
 
 section.title div {
@@ -84,6 +75,7 @@ section.title div {
 
 section.menu {
   text-align: left;
+  margin-top: 60px;
 }
 
 section.menu h2 {
@@ -150,14 +142,19 @@ section.menu a:hover {
 
 section.menu div {
   padding: 0 15px;
-  border-left: 1px solid black;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background: #f8f5f2;
   -webkit-transition: height 0.4s ease-out;
   transition: height 0.4s ease-out;
   margin-bottom: 0 !important;
 }
 
 .content {
-  margin: 260px 20px 0;
+  margin: 280px 20px 0;
 }
 
 section.two-col {
@@ -192,15 +189,6 @@ section.two-col div div ul li {
   line-height: 1.8em;
 }
 
-section.two-col div div.button {
-  text-align: center;
-  margin-top: 30px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 30px;
-  color: black;
-}
-
 section.two-col div div a {
   text-decoration: none;
 }
@@ -209,22 +197,63 @@ section.two-col div div a:hover {
   color: gray;
 }
 
-section.two-col .dk, section.two-col .en {
+section.two-col h2.button {
+  text-align: center;
+  margin: 30px 0 0;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
   opacity: 1;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
 
-section.two-col .dk.fade, section.two-col .en.fade {
+section.two-col h2.button:hover {
   opacity: 0.3;
 }
 
-#about, #house, #staying, #dining, #reserve {
+.content .dk,
+.content .en {
+  max-width: 48em;
+  opacity: 1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.content .dk.fade,
+.content .en.fade {
+  opacity: 0.3;
+}
+
+.menu .dk,
+.menu .en {
+  opacity: 1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.menu .dk.fade,
+.menu .en.fade {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.menu .dk.fade a,
+.menu .en.fade a {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+#about,
+#house,
+#staying,
+#dining,
+#reserve {
   padding-top: 100px;
   margin-top: -100px;
 }
 
-section.ten-col {
+section.images.ten-col {
   padding-top: 40px;
   margin-bottom: 80px;
   -webkit-box-sizing: border-box;
@@ -235,39 +264,46 @@ section.ten-col {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 60px;
           column-gap: 60px;
+  max-width: 100%;
   row-gap: 60px;
 }
 
-section.ten-col div {
+section.images.ten-col div {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-section.ten-col div img {
+section.images.ten-col div img {
   width: 100%;
   border: 5px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-section.ten-col div.hor {
+section.images.ten-col div.hor {
   grid-column: span 4;
 }
 
-section.ten-col div.ver {
+section.images.ten-col div.hor.first {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+section.images.ten-col div.ver {
   grid-column: span 3;
 }
 
-section.ten-col div.space1 {
+section.images.ten-col div.space1 {
   grid-column: span 1;
 }
 
-section.ten-col div.space2 {
+section.images.ten-col div.space2 {
   grid-column: span 2;
 }
 
-section.ten-col div.space4 {
+section.images.ten-col div.space4 {
   grid-column: span 4;
 }
 
@@ -314,7 +350,8 @@ footer a {
   section.ten-col div.ver {
     grid-column: span 3;
   }
-  section.ten-col div .space1, section.ten-col div .space2 {
+  section.ten-col div .space1,
+  section.ten-col div .space2 {
     grid-column: span 1;
   }
 }
