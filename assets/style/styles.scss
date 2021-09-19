@@ -51,12 +51,6 @@ body {
 // Header
 header {
     position: fixed;
-    // background: linear-gradient(
-    //     0deg,
-    //     rgba(248, 245, 242, 0) 0px,
-    //     rgba(248, 245, 242, 1) 20px,
-    //     rgba(248, 245, 242, 1) 100%
-    // );
     top: 0;
     left: 0;
     right: 0;
@@ -123,7 +117,7 @@ section.menu {
         justify-self: end;
         width: 250px;
         border: 1px solid black;
-        border-radius: 21px;
+        border-radius: 15px;
         background: rgb(248, 245, 242);
         transition: height 0.4s ease-out;
         margin-bottom: 0 !important;
@@ -168,7 +162,7 @@ section.two-col {
             display: inline-block;
             padding: 13px 20px;
             border: 1px solid black;
-            border-radius: 30px;
+            border-radius: 15px;
             color: black;
             opacity: 1;
         transition: all 400ms ease-in-out;
