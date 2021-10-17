@@ -10,6 +10,7 @@ html {
 body {
     background-color: #f8f5f2;
     margin: 0;
+    width: 100%;
 }
 section {
     margin: 0 0;
@@ -23,7 +24,7 @@ body {
         line-height: 1.8em;
         margin: 10px auto;
     }
-    h1{
+    h1 {
         font-size: 18px;
         text-align: left;
         font-weight: normal;
@@ -124,6 +125,7 @@ section.menu {
     }
 }
 
+
 // Layout
 .content {
     margin: 280px 20px 0;
@@ -157,23 +159,23 @@ section.two-col {
         }
     }
     h2.button {
-            text-align: center;
-            margin: 30px 0 0;
-            display: inline-block;
-            padding: 13px 20px;
-            border: 1px solid black;
-            border-radius: 15px;
-            color: black;
-            opacity: 1;
+        text-align: center;
+        margin: 30px 0 0;
+        display: inline-block;
+        padding: 13px 20px;
+        border: 1px solid black;
+        border-radius: 15px;
+        color: black;
+        opacity: 1;
         transition: all 400ms ease-in-out;
-            &:hover {
-                opacity: 0.3;
-            }
+        &:hover {
+            opacity: 0.3;
+        }
     }
-    
 }
-.content{
-    .dk, .en {
+.content {
+    .dk,
+    .en {
         max-width: 48em;
         opacity: 1;
         transition: all 400ms ease-in-out;
@@ -184,11 +186,12 @@ section.two-col {
 }
 
 .menu {
-    .dk, .en {
+    .dk,
+    .en {
         opacity: 1;
         transition: all 400ms ease-in-out;
         &.fade {
-            border:1px solid rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             a {
                 color: rgba(0, 0, 0, 0.3) !important;
             }
@@ -197,11 +200,49 @@ section.two-col {
 }
 
 
-#about, #house, #staying, #dining, #reserve {
+section.drawings {
+    pointer-events: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    img {
+        pointer-events: none;
+        position: absolute;
+        &#one {
+            left: 30%;
+            transform: rotate(-80deg);
+            bottom: -46%;
+            height: 801px;
+        }
+        &#two {
+            left: 5px;
+            transform: rotate(180deg);
+            top: 70px;
+            height: 80px;
+        }
+        &#three {
+            left: 50%;
+            top: 18%;
+            height: 169px;
+        }
+        &#four {
+            left: 1%;
+            top: 10%;
+            height: 12%;
+        }
+    }
+}
+
+#about,
+#house,
+#staying,
+#dining,
+#reserve {
     padding-top: 100px;
     margin-top: -100px;
 }
-
 
 // Images
 section.images.ten-col {
@@ -216,31 +257,103 @@ section.images.ten-col {
     div {
         align-self: center;
         img {
+            z-index: 100;
             width: 100%;
             border: 5px solid white;
             box-sizing: border-box;
-        }
-        &.hor {
-            grid-column: span 4;
-            &.first {
-                align-self: start;
+            &.draw {
+                border: none;
+                position: absolute;
+            }
+            &.one {
+                bottom: -80px;
+                right: -40px;
+                width: 35%;
+            }
+            &.two {
+                bottom: -100px;
+                right: -80px;
+                width: 50%;
+            }
+            &.three {
+                width: 60%;
+                bottom: 0;
+                left: 0;
+            }
+            &.four {
+                width: 50%;
+                bottom: 0;
+                left: 0;
+            }
+            &.five {
+                width: 60%;
+                bottom: 0;
+                left: 0;
+            }
+            &.six {
+                width: 85%;
+                top: -45px;
+                left: 20px; 
+            }
+            &.seven {
+                width: 50%;
+                top: -35px;
+                left: 20px; 
+            }
+            &.eight {
+                width: 210%;
+                top: -35px;
+                left: 20px; 
+            }
+            &.nine {
+                width: 90%;
+                top: -35px;
+                right: -100px; 
+            }
+            &.ten {
+                width: 240%;
+                top: -35px;
+                right: -100px; 
+            }
+            &.eleven {
+                width: 320%;
+                top: -260px;
+                right: 10px; 
+            }
+            &.twelve {
+                width: 110%;
+                bottom: -200px;
+                right: 10px; 
             }
         }
+        &.hor {
+            position: relative;
+            grid-column: span 4;
+        }
         &.ver {
+            position: relative;
             grid-column: span 3;
         }
-        &.space1{
+        &.top {
+            align-self: start;
+        }
+        &.bottom {
+            align-self: end;
+        }
+        &.space1 {
+            position: relative;
             grid-column: span 1;
         }
         &.space2 {
+            position: relative;
             grid-column: span 2;
         }
         &.space4 {
+            position: relative;
             grid-column: span 4;
         }
     }
 }
-
 
 // Footer
 
@@ -248,7 +361,7 @@ footer {
     text-align: center;
     img {
         width: 100%;
-        max-width: 300px;
+        max-width: 380px;
         margin: 40px auto 40px;
     }
     a {
@@ -257,41 +370,106 @@ footer {
     }
 }
 
-
-
 @media (max-width: 1000px) {
     section.menu {
-        margin-top: 10px;
+        margin-top: 50px;
+        right: 0;
         .toggle {
             display: flex !important;
         }
     }
-    
+
     .dk {
         display: none;
     }
 
-    .content  {
+    .content {
         margin-top: 310px;
         section.two-col {
             div {
                 grid-column: span 2;
             }
-        } 
+        }
     }
 
-    section.ten-col {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    section.images.ten-col {
+        display: flex;
+        flex-direction: column;
         div {
+            text-align: center;
             &.hor {
-                grid-column: span 4;
+                max-width: 90vw;
             }
             &.ver {
-                grid-column: span 3;
+                max-width: 70vw;
             }
-            .space1, .space2 {
-                grid-column: span 1;
+            img {
+                z-index: 100;
+                margin: 0 auto;
+                &.one {
+                    right: 20px;
+                    width: 25%;
+                    z-index: 100;
+                }
+                &.two {
+                    bottom: -100px;
+                    left: 0;
+                    width: 25%;
+                }
+                &.three {
+                    width: 40%;
+                    bottom: 0;
+                    left: 0;
+                }
+                &.four {
+                    width: 45%;
+                    bottom: 0;
+                    left: 0;
+                }
+                &.five {
+                    width: 50%;
+                    bottom: 0;
+                    right: -20px;
+                }
+                &.six {
+                    width: 75%;
+                    top: -45px;
+                    left: 20px; 
+                }
+                &.seven {
+
+                    width: 40%;
+                    top: -35px;
+                    left: 20px; 
+                }
+                &.eight {
+                    width: 160%;
+                    top: -35px;
+                    left: 20px; 
+                }
+                &.nine {
+                    width: 70%;
+                    top: -35px;
+                    right: -100px; 
+                }
+                &.ten {
+                    width: 170%;
+                    top: -35px;
+                    right: -100px; 
+                }
+                &.eleven {
+                    width: 20%;
+                    top: -260px;
+                    right: 10px; 
+                }
+                &.twelve {
+                    width: 70%;
+                    bottom: -200px;
+                    right: 10px; 
+                }
+
             }
         }
+
     }
 }

@@ -10,6 +10,7 @@ html {
 body {
   background-color: #f8f5f2;
   margin: 0;
+  width: 100%;
 }
 
 section {
@@ -215,32 +216,83 @@ section.two-col h2.button:hover {
   opacity: 0.3;
 }
 
-.content .dk, .content .en {
+.content .dk,
+.content .en {
   max-width: 48em;
   opacity: 1;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
 
-.content .dk.fade, .content .en.fade {
+.content .dk.fade,
+.content .en.fade {
   opacity: 0.3;
 }
 
-.menu .dk, .menu .en {
+.menu .dk,
+.menu .en {
   opacity: 1;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
 
-.menu .dk.fade, .menu .en.fade {
+.menu .dk.fade,
+.menu .en.fade {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.menu .dk.fade a, .menu .en.fade a {
+.menu .dk.fade a,
+.menu .en.fade a {
   color: rgba(0, 0, 0, 0.3) !important;
 }
 
-#about, #house, #staying, #dining, #reserve {
+section.drawings {
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+section.drawings img {
+  pointer-events: none;
+  position: absolute;
+}
+
+section.drawings img#one {
+  left: 30%;
+  -webkit-transform: rotate(-80deg);
+          transform: rotate(-80deg);
+  bottom: -46%;
+  height: 801px;
+}
+
+section.drawings img#two {
+  left: 5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 70px;
+  height: 80px;
+}
+
+section.drawings img#three {
+  left: 50%;
+  top: 18%;
+  height: 169px;
+}
+
+section.drawings img#four {
+  left: 1%;
+  top: 10%;
+  height: 12%;
+}
+
+#about,
+#house,
+#staying,
+#dining,
+#reserve {
   padding-top: 100px;
   margin-top: -100px;
 }
@@ -267,35 +319,124 @@ section.images.ten-col div {
 }
 
 section.images.ten-col div img {
+  z-index: 100;
   width: 100%;
   border: 5px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+section.images.ten-col div img.draw {
+  border: none;
+  position: absolute;
+}
+
+section.images.ten-col div img.one {
+  bottom: -80px;
+  right: -40px;
+  width: 35%;
+}
+
+section.images.ten-col div img.two {
+  bottom: -100px;
+  right: -80px;
+  width: 50%;
+}
+
+section.images.ten-col div img.three {
+  width: 60%;
+  bottom: 0;
+  left: 0;
+}
+
+section.images.ten-col div img.four {
+  width: 50%;
+  bottom: 0;
+  left: 0;
+}
+
+section.images.ten-col div img.five {
+  width: 60%;
+  bottom: 0;
+  left: 0;
+}
+
+section.images.ten-col div img.six {
+  width: 85%;
+  top: -45px;
+  left: 20px;
+}
+
+section.images.ten-col div img.seven {
+  width: 50%;
+  top: -35px;
+  left: 20px;
+}
+
+section.images.ten-col div img.eight {
+  width: 210%;
+  top: -35px;
+  left: 20px;
+}
+
+section.images.ten-col div img.nine {
+  width: 90%;
+  top: -35px;
+  right: -100px;
+}
+
+section.images.ten-col div img.ten {
+  width: 240%;
+  top: -35px;
+  right: -100px;
+}
+
+section.images.ten-col div img.eleven {
+  width: 320%;
+  top: -260px;
+  right: 10px;
+}
+
+section.images.ten-col div img.twelve {
+  width: 110%;
+  bottom: -200px;
+  right: 10px;
+}
+
 section.images.ten-col div.hor {
+  position: relative;
   grid-column: span 4;
 }
 
-section.images.ten-col div.hor.first {
+section.images.ten-col div.ver {
+  position: relative;
+  grid-column: span 3;
+}
+
+section.images.ten-col div.top {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
 }
 
-section.images.ten-col div.ver {
-  grid-column: span 3;
+section.images.ten-col div.bottom {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 section.images.ten-col div.space1 {
+  position: relative;
   grid-column: span 1;
 }
 
 section.images.ten-col div.space2 {
+  position: relative;
   grid-column: span 2;
 }
 
 section.images.ten-col div.space4 {
+  position: relative;
   grid-column: span 4;
 }
 
@@ -305,7 +446,7 @@ footer {
 
 footer img {
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
   margin: 40px auto 40px;
 }
 
@@ -316,7 +457,8 @@ footer a {
 
 @media (max-width: 1000px) {
   section.menu {
-    margin-top: 10px;
+    margin-top: 50px;
+    right: 0;
   }
   section.menu .toggle {
     display: -webkit-box !important;
@@ -332,18 +474,87 @@ footer a {
   .content section.two-col div {
     grid-column: span 2;
   }
-  section.ten-col {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  section.images.ten-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  section.ten-col div.hor {
-    grid-column: span 4;
+  section.images.ten-col div {
+    text-align: center;
   }
-  section.ten-col div.ver {
-    grid-column: span 3;
+  section.images.ten-col div.hor {
+    max-width: 90vw;
   }
-  section.ten-col div .space1, section.ten-col div .space2 {
-    grid-column: span 1;
+  section.images.ten-col div.ver {
+    max-width: 70vw;
+  }
+  section.images.ten-col div img {
+    z-index: 100;
+    margin: 0 auto;
+  }
+  section.images.ten-col div img.one {
+    right: 20px;
+    width: 25%;
+    z-index: 100;
+  }
+  section.images.ten-col div img.two {
+    bottom: -100px;
+    left: 0;
+    width: 25%;
+  }
+  section.images.ten-col div img.three {
+    width: 40%;
+    bottom: 0;
+    left: 0;
+  }
+  section.images.ten-col div img.four {
+    width: 45%;
+    bottom: 0;
+    left: 0;
+  }
+  section.images.ten-col div img.five {
+    width: 50%;
+    bottom: 0;
+    right: -20px;
+  }
+  section.images.ten-col div img.six {
+    width: 75%;
+    top: -45px;
+    left: 20px;
+  }
+  section.images.ten-col div img.seven {
+    width: 40%;
+    top: -35px;
+    left: 20px;
+  }
+  section.images.ten-col div img.eight {
+    width: 160%;
+    top: -35px;
+    left: 20px;
+  }
+  section.images.ten-col div img.nine {
+    width: 70%;
+    top: -35px;
+    right: -100px;
+  }
+  section.images.ten-col div img.ten {
+    width: 170%;
+    top: -35px;
+    right: -100px;
+  }
+  section.images.ten-col div img.eleven {
+    width: 20%;
+    top: -260px;
+    right: 10px;
+  }
+  section.images.ten-col div img.twelve {
+    width: 70%;
+    bottom: -200px;
+    right: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
