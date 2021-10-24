@@ -10,74 +10,537 @@ html {
 body {
   background-color: #f8f5f2;
   margin: 0;
+  width: 100%;
+}
+
+section {
+  margin: 0 0;
 }
 
 body {
   font-family: "Quadrant Duo Slab", "Courier New", Courier, monospace;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body p {
-  line-height: 1.6em;
-  margin: 0;
+  line-height: 1.8em;
+  margin: 10px auto;
 }
 
-.content {
+body h1 {
+  font-size: 18px;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  margin: 0 15px 0;
+}
+
+body h2 {
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 0 30px;
+}
+
+body h3 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+body a {
+  color: black;
+  text-decoration: underline;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: calc(100vw - 40px);
+  margin: 0 20px;
+  padding-bottom: 4px;
+  z-index: 1000;
+}
+
+section.title {
+  position: absolute;
+  margin-top: 20px;
+}
+
+section.title div {
+  margin-bottom: 0 !important;
+}
+
+section.menu {
+  text-align: left;
+  margin-top: 20px;
+}
+
+section.menu h2 {
+  margin: 0;
+  -webkit-transition: all 300ms cubic-bezier(0.11, 0.57, 0.45, 1.06);
+  transition: all 300ms cubic-bezier(0.11, 0.57, 0.45, 1.06);
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100vw;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 40px;
 }
 
-.content section {
-  margin: 20px 40px;
+section.menu h2.hide {
+  opacity: 0;
+  height: 0;
+  margin: 0;
 }
 
-.content section img {
-  max-height: 70vh;
-  width: auto;
+section.menu h2.label {
+  cursor: pointer;
+}
+
+section.menu h2.active {
+  opacity: 1;
+  height: 40px;
+}
+
+section.menu h2.toggle {
+  display: none;
+}
+
+section.menu h2.toggle span {
+  cursor: pointer;
+}
+
+section.menu h2.toggle span:first-of-type {
+  margin-right: 15px;
+}
+
+section.menu h2.toggle span:last-of-type {
+  margin-left: 15px;
+}
+
+section.menu a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+section.menu a:hover {
+  color: gray;
+}
+
+section.menu div {
+  padding: 0 15px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #f8f5f2;
+  -webkit-transition: height 0.4s ease-out;
+  transition: height 0.4s ease-out;
+  margin-bottom: 0 !important;
+}
+
+.content {
+  margin: 280px 20px 0;
+}
+
+section.two-col {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+}
+
+section.two-col div {
+  grid-column: span 1;
+}
+
+section.two-col div div {
+  padding: 0 15px;
+  border-left: 1px solid black;
+  margin-bottom: 80px;
+}
+
+section.two-col div div h4 {
+  font-weight: normal;
+  margin-top: 40px;
+}
+
+section.two-col div div ul {
+  -webkit-padding-start: 15px;
+          padding-inline-start: 15px;
+}
+
+section.two-col div div ul li {
+  line-height: 1.8em;
+}
+
+section.two-col div div a {
+  text-decoration: none;
+}
+
+section.two-col div div a:hover {
+  color: gray;
+}
+
+section.two-col h2.button {
+  text-align: center;
+  margin: 30px 0 0;
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: black;
+  opacity: 1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+section.two-col h2.button:hover {
+  opacity: 0.3;
+}
+
+.content .dk,
+.content .en {
+  max-width: 48em;
+  opacity: 1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.content .dk.fade,
+.content .en.fade {
+  opacity: 0.3;
+}
+
+.menu .dk,
+.menu .en {
+  opacity: 1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.menu .dk.fade,
+.menu .en.fade {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.menu .dk.fade a,
+.menu .en.fade a {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+section.drawings {
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+section.drawings img {
+  pointer-events: none;
+  position: absolute;
+}
+
+section.drawings img#one {
+  left: 5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 70px;
+  height: 80px;
+}
+
+section.drawings img#two {
+  right: 340px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 20px;
+  height: 100px;
+}
+
+#about,
+#house,
+#staying,
+#dining,
+#reserve {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+section.images.ten-col {
+  padding-top: 40px;
+  margin-bottom: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  max-width: 100%;
+  row-gap: 60px;
+}
+
+section.images.ten-col div {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section.images.ten-col div img {
+  z-index: 100;
+  width: 100%;
   border: 5px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.content section div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: 30px 0;
+section.images.ten-col div img.draw {
+  border: none;
+  position: absolute;
 }
 
-.content p {
+section.images.ten-col div img.one {
+  bottom: -80px;
+  right: -40px;
+  width: 120px;
+}
+
+section.images.ten-col div img.two {
+  top: -80px;
+  right: -60px;
+  width: 120px;
+}
+
+section.images.ten-col div img.three {
+  width: 85px;
+  bottom: 0;
+  left: 0;
+}
+
+section.images.ten-col div img.four {
+  width: 85px;
+  bottom: -30px;
+  right: -40px;
+}
+
+section.images.ten-col div img.five {
+  width: 90px;
+  bottom: -50px;
+  left: 0;
+}
+
+section.images.ten-col div img.six {
+  width: 360px;
+  top: -45px;
+  right: 20px;
+}
+
+section.images.ten-col div img.seven {
+  width: 90px;
+  top: -35px;
+  right: -100px;
+}
+
+section.images.ten-col div img.eight {
+  width: 350px;
+  top: -35px;
+  right: 20px;
+}
+
+section.images.ten-col div img.nine {
+  width: 170px;
+  top: -35px;
+  left: -100px;
+}
+
+section.images.ten-col div img.ten {
+  width: 150px;
+  top: -35px;
+  right: -100px;
+}
+
+section.images.ten-col div img.eleven {
+  width: 200px;
+  top: -20px;
+  right: 10px;
+}
+
+section.images.ten-col div img.twelve {
+  width: 60px;
+  bottom: 30px;
+  left: -100px;
+}
+
+section.images.ten-col div.hor {
+  position: relative;
+  grid-column: span 4;
+}
+
+section.images.ten-col div.ver {
+  position: relative;
+  grid-column: span 3;
+}
+
+section.images.ten-col div.top {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+section.images.ten-col div.bottom {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+section.images.ten-col div.space1 {
+  position: relative;
+  grid-column: span 1;
+}
+
+section.images.ten-col div.space2 {
+  position: relative;
+  grid-column: span 2;
+}
+
+section.images.ten-col div.space4 {
+  position: relative;
+  grid-column: span 4;
+}
+
+footer {
   text-align: center;
-  margin: 20px 0 0;
 }
 
-.content p a {
+footer img {
+  width: 100%;
+  max-width: 380px;
+  margin: 40px auto 40px;
+}
+
+footer a {
   color: black;
+  margin: 10px;
 }
 
-.footer {
-  margin: auto 30px 30px auto;
-}
-
-.footer a {
-  color: black;
-  margin: 0 5px;
-  vertical-align: bottom;
+@media (max-width: 1000px) {
+  section.two-col {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  section.menu {
+    margin-top: 80px;
+  }
+  section.menu .toggle {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  section.menu div {
+    -ms-grid-column-align: auto;
+        justify-self: auto;
+    width: auto;
+  }
+  section.drawings img {
+    pointer-events: none;
+    position: absolute;
+  }
+  section.drawings img#one {
+    left: auto;
+    right: 5px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    top: 5px;
+    height: 65px;
+  }
+  section.drawings img#two {
+    display: none;
+  }
+  .dk {
+    display: none;
+  }
+  .en, .dk {
+    width: 100%;
+  }
+  .content {
+    margin-top: 310px;
+  }
+  .content section.two-col div {
+    grid-column: span 2;
+  }
+  section.images.ten-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.images.ten-col div {
+    text-align: center;
+  }
+  section.images.ten-col div.hor {
+    max-width: 90vw;
+  }
+  section.images.ten-col div.ver {
+    max-width: 70vw;
+  }
+  section.images.ten-col div img {
+    z-index: 100;
+    margin: 0 auto;
+  }
+  section.images.ten-col div img.one {
+    right: 30px;
+  }
+  section.images.ten-col div img.two {
+    left: -30px;
+  }
+  section.images.ten-col div img.four {
+    right: 30px;
+  }
+  section.images.ten-col div img.six {
+    left: 0;
+  }
+  section.images.ten-col div img.seven {
+    right: 20px;
+  }
+  section.images.ten-col div img.eight {
+    left: -40px;
+  }
+  section.images.ten-col div img.nine {
+    left: 0;
+  }
+  section.images.ten-col div img.ten {
+    right: auto;
+    left: 10px;
+  }
+  section.images.ten-col div img.twelve {
+    left: -20px;
+  }
+  section.images.ten-col div img.space1, section.images.ten-col div img .space2, section.images.ten-col div img .space4 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {

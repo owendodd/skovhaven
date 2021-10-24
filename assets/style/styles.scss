@@ -10,58 +10,457 @@ html {
 body {
     background-color: #f8f5f2;
     margin: 0;
+    width: 100%;
+}
+section {
+    margin: 0 0;
 }
 
 // Type
 body {
     font-family: "Quadrant Duo Slab", "Courier New", Courier, monospace;
-    font-size: 18px;
+    font-size: 16px;
     p {
-        line-height: 1.6em;
-        margin: 0;
+        line-height: 1.8em;
+        margin: 10px auto;
+    }
+    h1 {
+        font-size: 18px;
+        text-align: left;
+        font-weight: normal;
+        letter-spacing: 0.05em;
+        margin: 0 15px 0;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 1em;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin: 0 0 30px;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+    a {
+        color: black;
+        text-decoration: underline;
     }
 }
 
+// Header
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: calc(100vw - 40px);
+    margin: 0 20px;
+    padding-bottom: 4px;
+    z-index: 1000;
+}
+section.title {
+    position: absolute;
+    margin-top: 20px;
+    div {
+        margin-bottom: 0 !important;
+    }
+}
+section.menu {
+    text-align: left;
+    margin-top: 20px;
+    h2 {
+        margin: 0;
+        transition: all 300ms cubic-bezier(0.11, 0.57, 0.45, 1.06);
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        height: 40px;
+        &.hide {
+            opacity: 0;
+            height: 0;
+            margin: 0;
+        }
+        &.label {
+            cursor: pointer;
+        }
+        &.active {
+            opacity: 1;
+            height: 40px;
+        }
+        &.toggle {
+            display: none;
+            span {
+                cursor: pointer;
+                &:first-of-type {
+                    margin-right: 15px;
+                }
+                &:last-of-type {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        padding: 10px 0;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            color: gray;
+        }
+    }
+    div {
+        padding: 0 15px;
+        justify-self: end;
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 15px;
+        background: rgb(248, 245, 242);
+        transition: height 0.4s ease-out;
+        margin-bottom: 0 !important;
+    }
+}
 
 
 // Layout
 .content {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    section {
-        margin: 20px 40px; 
-        img {
-            max-height: 70vh;
-            width: auto;
-            border: 5px solid white;
-            box-sizing: border-box;
-        }
+    margin: 280px 20px 0;
+}
+section.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    div {
+        grid-column: span 1;
         div {
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
+            padding: 0 15px;
+            border-left: 1px solid black;
+            margin-bottom: 80px;
+            h4 {
+                font-weight: normal;
+                margin-top: 40px;
+            }
+            ul {
+                padding-inline-start: 15px;
+                li {
+                    line-height: 1.8em;
+                }
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: gray;
+                }
+            }
         }
     }
-    
-    p {
+    h2.button {
         text-align: center;
-        margin: 20px 0 0;
-        a {
-            color: black;
+        margin: 30px 0 0;
+        display: inline-block;
+        padding: 13px 20px;
+        border: 1px solid black;
+        border-radius: 15px;
+        color: black;
+        opacity: 1;
+        transition: all 400ms ease-in-out;
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+}
+.content {
+    .dk,
+    .en {
+        max-width: 48em;
+        opacity: 1;
+        transition: all 400ms ease-in-out;
+        &.fade {
+            opacity: 0.3;
         }
     }
 }
 
-.footer {
-    margin: auto 30px 30px auto;
+.menu {
+    .dk,
+    .en {
+        opacity: 1;
+        transition: all 400ms ease-in-out;
+        &.fade {
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            a {
+                color: rgba(0, 0, 0, 0.3) !important;
+            }
+        }
+    }
+}
+
+
+section.drawings {
+    pointer-events: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    img {
+        pointer-events: none;
+        position: absolute;
+        &#one {
+            left: 5px;
+            transform: rotate(180deg);
+            top: 70px;
+            height: 80px;
+        }
+        &#two {
+            right: 340px;
+            transform: rotate(180deg);
+            top: 20px;
+            height: 100px;
+        }
+    }
+}
+
+#about,
+#house,
+#staying,
+#dining,
+#reserve {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+// Images
+section.images.ten-col {
+    padding-top: 40px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 60px;
+    max-width: 100%;
+    row-gap: 60px;
+    div {
+        align-self: center;
+        img {
+            z-index: 100;
+            width: 100%;
+            border: 5px solid white;
+            box-sizing: border-box;
+            &.draw {
+                border: none;
+                position: absolute;
+            }
+            &.one {
+                bottom: -80px;
+                right: -40px;
+                width: 120px;
+            }
+            &.two {
+                top: -80px;
+                right: -60px;
+                width: 120px;
+            }
+            &.three {
+                width: 85px;
+                bottom: 0;
+                left: 0;
+            }
+            &.four {
+                width: 85px;
+                bottom: -30px;
+                right: -40px;
+            }
+            &.five {
+                width: 90px;
+                bottom: -50px;
+                left: 0;
+            }
+            &.six {
+                width: 360px;
+                top: -45px;
+                right: 20px; 
+            }
+            &.seven {
+                width: 90px;
+                top: -35px;
+                right: -100px; 
+            }
+            &.eight {
+                width: 350px;
+                top: -35px;
+                right: 20px; 
+            }
+            &.nine {
+                width: 170px;
+                top: -35px;
+                left: -100px; 
+            }
+            &.ten {
+                width: 150px;
+                top: -35px;
+                right: -100px; 
+            }
+            &.eleven {
+                width: 200px;
+                top: -20px;
+                right: 10px; 
+            }
+            &.twelve {
+                width: 60px;
+                bottom: 30px;
+                left: -100px; 
+            }
+        }
+        &.hor {
+            position: relative;
+            grid-column: span 4;
+        }
+        &.ver {
+            position: relative;
+            grid-column: span 3;
+        }
+        &.top {
+            align-self: start;
+        }
+        &.bottom {
+            align-self: end;
+        }
+        &.space1 {
+            position: relative;
+            grid-column: span 1;
+        }
+        &.space2 {
+            position: relative;
+            grid-column: span 2;
+        }
+        &.space4 {
+            position: relative;
+            grid-column: span 4;
+        }
+    }
+}
+
+// Footer
+
+footer {
+    text-align: center;
+    img {
+        width: 100%;
+        max-width: 380px;
+        margin: 40px auto 40px;
+    }
     a {
         color: black;
-        margin: 0 5px;
-        vertical-align: bottom;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    section.two-col {
+        grid-template-columns: 1fr;
+    }
+    section.menu {
+        margin-top: 80px;
+        .toggle {
+            display: flex !important;
+        }
+        div {
+            justify-self: auto;
+            width: auto;
+            
+        }
+    }
+
+    section.drawings {
+        img {
+            pointer-events: none;
+            position: absolute;
+            &#one {
+                left: auto;
+                right: 5px;
+                transform: rotate(180deg);
+                top: 5px;
+                height: 65px;
+            }
+            &#two {
+                display: none;
+            }
+        }
+    }
+
+    .dk {
+        display: none;
+    }
+
+    .en, .dk {
+        width: 100%;
+    }
+    
+
+    .content {
+        margin-top: 310px;
+        section.two-col {
+            div {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    section.images.ten-col {
+        display: flex;
+        flex-direction: column;
+        div {
+            text-align: center;
+            &.hor {
+                max-width: 90vw;
+            }
+            &.ver {
+                max-width: 70vw;
+            }
+            img {
+                z-index: 100;
+                margin: 0 auto;
+                &.one {
+                    right: 30px;
+                }
+                &.two {
+                    left: -30px;
+                }
+                &.four {
+                    right:30px;
+                }
+                &.six {
+                    left: 0;
+                }
+                &.seven {
+                    right: 20px;
+                }
+                &.eight {
+                    left:-40px;
+                }
+                &.nine {
+                    left: 0;
+                }
+                &.ten {
+                    right: auto;
+                    left: 10px;
+                }
+                &.twelve {
+                    left: -20px;
+                }
+
+                &.space1, .space2, .space4 {
+                    display: none;
+                }
+            }
+        }
+
     }
 }
 

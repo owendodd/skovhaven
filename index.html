@@ -13,22 +13,545 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/style/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/assets/js/lazysizes.min.js"></script>
 </head>
 
 <body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <section class="title">
+            <div>
+                <h1>Skovhaven</h1>
+                <h1>by Augusta</h1>
+            </div>
+        </section>
+        <section class="menu two-col">
+            <div class="en">
+                <h2 class="about active"><a href="/#about">About</a></h2>
+                <h2 class="house"><a href="/#house">The House</a></h2>
+                <h2 class="staying"><a href="/#staying">Sleepover</a></h2>
+                <h2 class="dining"><a href="/#dining">Dining</a></h2>
+                <h2 class="reserve"><a href="/#reserve">Reservation</a></h2>
+                <h2 class="toggle"><span class="toggleDK">DK</span> / <span class="toggleEN">EN</span></h2>
+            </div>
+            <div class="dk">
+                <h2 class="about active"><a href="/#about">Om</a></h2>
+                <h2 class="house"><a href="/#house">Huset</a></h2>
+                <h2 class="staying"><a href="/#staying">Ophold</a></h2>
+                <h2 class="dining"><a href="/#dining">Gæstebud</a></h2>
+                <h2 class="reserve"><a href="/#reserve">Reservation</a></h2>
+                <h2 class="toggle"><span class="toggleDK">DK</span> / <span class="toggleEN">EN</span></h2>
+            </div>
+        </section>
+        <section class="drawings">
+            <img id="one" src="/assets/images/drawings/line_4.png" alt="drawings">
+            <img id="two" src="/assets/images/drawings/shape_4.png" alt="drawings">
+        </section>
+    </header>
 
     <div class="content">
-        <section>
-            <div><span>Skovhaven</span><span>by Augusta</span></div>
-            <img src="/assets/images/one-table.png" alt="Table">
-            <p>Coming Soon</p>
+        <section class="images ten-col" id="menu">
+            <div class="hor top">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/about1.jpeg">
+                <img class="lazyload draw one" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_3.png">
+            </div>
+            <div class="space1">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/about2.jpeg">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/about3.jpeg">
+                <img class="lazyload draw two" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_12.png">
+            </div>
+            <div class="space2">
+                <img class="lazyload draw three" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/shape_1.png">
+            </div>
+            <div class="hor">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/about4.jpeg">
+            </div>
+            <div class="space1"></div>
+            <div class="hor">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/about5.jpeg">
+            </div>
         </section>
-        <div class="footer">
-            <a href="mailto:augusta@augustasorensen.com">Email</a>
-            <a href="https://www.instagram.com/skovhaven_byaugusta/">Instagram</a>
-        </div>
+
+        <section class="two-col point" id="about">
+            <div class="en">
+                <h2 class="title">About</h2>
+                <div>
+                    <p>I would like to tell you about a very special place, located deep in the forest. To visit, you
+                        can just walk through the rolling hills of the forest, follow the scenic lakeshore of Skarresø
+                        and make a turn by the old stone fence. At the end of your path you’ll find Skovhaven surrounded
+                        by lush ferns and old oak trees.</p>
+                    <p>Skovhaven is an old red house, proudly resting on a hilltop overlooking Skarresø. Here, I will be
+                        standing in the doorway to welcome you with a freshly picked apple in my hand.</p>
+                    <p>You’re invited into the world of Skovhaven, with all its edible stories and sensuous surprises.
+                        Here you’ll find a place to rest and reflect, to connect with the people accompanying you and
+                        with yourself. You will eat well here. Perhaps you will discover aromas and flavors that remind
+                        you of someone special or taste something you have never tasted before. Skovhaven is a place for
+                        exploring, for sensing, and for being inspired.</p>
+                </div>
+            </div>
+            <div class="dk">
+                <h2 class="title">Om</h2>
+                <div>
+                    <p>Jeg vil gerne fortælle dig om et helt særligt sted, der ligger langt inde i skoven.</p>
+                    <p>Du kan komme på besøg, hvis du går igennem skovens bakkede morænelandskab, følger Skarrsø og
+                        drejer ved stengærdet. Her møder du pludselig Skovhaven. Skovhaven er et rødt gammelt hus, der
+                        stolt gemmer sig i skovens frodige bregner og gamle egetræer. Fra sin bakketop er der udsigt
+                        over Skarrsø. Her byder jeg dig velkommen, stående i døren med et skovæble i min hånd.</p>
+                    <p>I Skovhaven går tiden i stå og det giver dig mulighed for at være tilstede med dig selv og dem du
+                        holder af, omgivet af natur og duften af hjemmebag. Du inviteres ind i Skovhavens verden, der
+                        rummer spiselige fortællinger og sanselige overraskelser. Skovhavens historie er i selskab med
+                        mine arvede blonder og min farmors gamle slidte opskrifter, inspirationskilderne til mine
+                        gæstebud.</p>
+                    <p>Jeg giver dig muligheden for at spise dig mæt i Skovhavens eventyr. Måske vil du opleve en smag
+                        for første gang, måske møder du en duft, der minder dig om en helt særlig person. Skovhaven
+                        giver dig tid til at opleve maden og gå på opdagelse i retternes historie og sanselighed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="images ten-col">
+            <div class="hor">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/house1.jpeg">
+                <img class="lazyload draw four" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_11.png">
+            </div>
+            <div class="space2">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/house2.jpeg">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/house3.jpeg">
+                <img class="lazyload draw five" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/shape_3.png">
+            </div>
+            <div class="space2">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/house4.jpeg">
+            </div>
+
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/house5b.jpeg">
+            </div>
+            <div class="hor">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/house6.jpeg">
+                <img class="lazyload draw six" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_8.png">
+            </div>
+        </section>
+
+        <section class="two-col point" id="house">
+            <div class="en">
+                <h2 class="title">The House</h2>
+                <div>
+                    <p>When you visit Skovhaven, you and those accompanying you will be my only guests.
+                        Shovhaven has 8 beds located in 5 rooms on the first floor. The distribution of beds is flexible
+                        and all 5 rooms provide beautiful views of the surrounding landscape.</p>
+                    <p>In the living room you’ll find a space for immersion in stories, poetry and recipes. The kitchen
+                        is always filled with fresh ingredients, while piles of my favorite books and my grandmother’s
+                        handwritten notes and recipes sit on the shelves next to last year's honey harvest. In the
+                        pantry you will find pickled DNA from the forest, a collection of wines and beers, jams and
+                        sweets. The contents of the pantry change and grow with each season passing.</p>
+                    <p>At the heart of Skovhaven, you’ll find a large wooden dining table, seating 8 people. Accompanied
+                        by the soft crackling sounds of the wood stove on a chilly day, or the last birdsong of a warm
+                        summer's evening, the dining table will set the scene for all your meals in Skovhaven.</p>
+                    <p>In Skovhaven you will also find my studio, where I develop my food performances, create menus and
+                        perform my daily practice of cooking eggs on intuition.</p>
+                </div>
+            </div>
+
+            <div class="dk">
+                <h2 class="title">Huset</h2>
+                <div>
+                    <p>Når du er i Skovhaven, er du og dine, de eneste gæster.</p>
+                    <p>Der er 8 senge fordelt på 5 værelser, fordelingen af senge er fleksibel. Alle værelserne har smuk
+                        udsigt til den omkringliggende natur.</p>
+                    <p>Køkkenet er stort og fyldt med friske råvarer, badeværelset har badekar. Forrådskammeret, vokser
+                        i takt med årstiderne, her finder du syltet dna af skoven, en samling af vine og øl, marmelader
+                        og søde sager. Brændeovnen og det store tunge spisebord sætter rammen for alle dine måltider og
+                        i stuen er der plads til fordybelse i bøger, lyrik og opskrifter.</p>
+                    <p>I Skovhaven finder I også mit atelier, som jeg arbejder i, når jeg ikke har gæster. Her udvikler
+                        jeg opskrifter, menuer og madperformances og øver mig dagligt i at koge æg på intuition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="images ten-col">
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/stay1.jpeg">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/stay2b.jpeg">
+                <img class="lazyload draw seven" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_5.png">
+            </div>
+            <div class="space2">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/stay3b.jpeg">
+                <img class="lazyload draw eight" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_6.png">
+            </div>
+            <div class="space2">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/stay4.jpeg">
+            </div>
+            <div class="space2"></div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/stay5.jpeg">
+                <img class="lazyload draw twelve" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/shape_2.png">
+            </div>
+            <div class="space1">
+
+            </div>
+        </section>
+
+        <section class="two-col point" id="staying">
+            <div class="en">
+                <h2 class="title">Sleepover</h2>
+                <div>
+                    <h3>A single overnight stay</h3>
+                    <p>You arrive at Skovhaven in the afternoon, the coffee is freshly brewed and the cake is still
+                        warm. I have created a special menu for the next 24 hours, picked up fresh and local ingredients
+                        and gently made your beds. The stage is set in the kitchen, where you’ll find that all the
+                        ingredients are prepared. All you have to do is open the fridge and follow my recipes to
+                        complete tonight's dinner. Explore drawers and cupboards and be seduced in the pantry. When the
+                        sun rises, the cold-raised buns are ready to be baked, the coffee is ready to be brewed and the
+                        eggs to be boiled on intuition - all lovingly guided by my handwritten letter on the kitchen
+                        table. I will come and clear the breakfast table while you pack and go for a walk down to the
+                        lake before I send you safely on your journey back home again.</p>
+                    <h4>Details</h4>
+                    <p>
+                    <ul>
+                        <li>Welcome from kl. 15.00</li>
+                        <li>We say goodbye again the next day at 11.00</li>
+                        <li>Price DKK 2,900 per person</li>
+                        <li>Consisting of: afternoon cake, dinner and breakfast</li>
+                        <li>Alcohol is purchased in Skovhaven</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>A weekend with your loved ones</h3>
+                    <p>On Friday afternoon, I will welcome you and your guests at the door, just to give you the keys to
+                        Skovhaven. The house is all yours, I will see you again on Sunday. The fragrance of fresh
+                        flowers and the aroma of freshly-baked goods will greet you as soon as you enter the house. On
+                        the kitchen counter you’ll find a pot of coffee and a cake waiting for you - be careful: both of
+                        them might still be hot. I have curated all your meals for the weekend and left you a small
+                        handwritten booklet with recipes and loving instructions for you to lean on or just get inspired
+                        by. The kitchen is full of fresh groceries, and all the ingredients you will need for your stay
+                        are here. Let your senses guide you through the weekend.</p>
+                    <h4>Details</h4>
+                    <p>
+                    <ul>
+                        <li>Welcome on Friday from 15.00</li>
+                        <li>We say goodbye again on Sunday at 15.00</li>
+                        <li>Price DKK 5,500 per person</li>
+                        <li>Consisting of 2x: breakfast, lunch, afternoon cake and dinner.</li>
+                        <li>Alcohol is purchased in Skovhaven, coffee & tea are included in the price.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>Purchases during your stay in Skovhaven</h3>
+                    <p>
+                    <ul>
+                        <li>A dinner created and served by Augusta 750 DKK per. person</li>
+                        <li>A party cake designed specifically for you and your celebratory occasion</br>Start price DKK
+                            350 + DKK 75 per. person</li>
+                        <li>A box of Haute Couture Candy to enjoy during your stay</br>250 kr.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="dk">
+                <h2 class="title">Ophold</h2>
+                <div>
+                    <h3>En enkel overnatning</h3>
+                    <p>I ankommer til Skovhaven om eftermiddagen, jeg har lavet kaffe til jer og kagedåsen er fyldt. Jeg
+                        har skabt en forkælelsesmenu for det næste døgn, hentet friske, lokale råvarer og klargjort
+                        jeres senge. Scenen er sat i køkkenet, råvarer er forberedt, du skal bare åbne køleskabet og
+                        give dig hen til mine opskrifter for at fuldende aftens middag. Gå på opdagelse i skuffer og
+                        skabe og bliv forført i forrådskammeret. Når solen står op er de koldhævet boller klar til at
+                        blive bagt, kaffen brygges og ægget koges på intuition, kærligt guidet af min håndskrevne hilsen
+                        på køkkenbordet. Jeg kommer og rydder morgenbordet, mens I pakker og går en tur ned til søen,
+                        før jeg sender jeg trygt hjem igen.</p>
+                    <h4>Detaljer</h4>
+                    <p>
+                    <ul>
+                        <li>Velkomst fra kl. 15.00</li>
+                        <li>Vi tager afsked igen næste dag kl. 11.00</li>
+                        <li>Pris 2.900 kr. pr. person</li>
+                        <li>Bestående af: eftermiddagskage, middag og morgenmad.</li>
+                        <li>Alkohol tilkøbes i Skovhaven.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>En weekend med dine kære</h3>
+                    <p>I ankommer til Skovhaven i løbet af fredag eftermiddag, hele huset dufter. Der står en varm
+                        frugtkage på køkkenbordet, ved siden af nøglen til Skovhaven. Jeg viser jer rundt og præsenterer
+                        weekendens menu, som vil åbne op for tilstedeværelsen i måltiderne og give jer tid sammen. Jeres
+                        værelser er redt op og i det lille hæfte finder i kærlige instruktioner til tilberedningen af
+                        hvert enkelt måltid, sankeruter og en guide til at koge et æg på intuition. Køkkenet er prydet
+                        med alle de friske råvarer I får brug for gennem weekenden. Når alt er sagt, drager jeg videre.
+                        Skovhaven er nu jeres, pas godt på den, vi ses på søndag.</p>
+                    <h4>Detaljer</h4>
+                    <p>
+                    <ul>
+                        <li>Velkomst fredag fra kl. 15.00</li>
+                        <li>Vi tager afsked igen søndag kl. 15.00</li>
+                        <li>Pris 5.500 kr. pr. person</li>
+                        <li>Bestående af 2x: morgenmad, frokost, eftermiddagskage og middag.</li>
+                        <li>Alkohol tilkøbes i Skovhaven, kaffe & te er inkluderet i prisen.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>Tilkøb under dit ophold i Skovhaven</h3>
+                    <p>
+                    <ul>
+                        <li>En middag skabt og serveret af Augusta 750 kr. pr. person</li>
+                        <li>En festkage designet særligt til dig der skal fejres</br>Start pris 350 kr. + 75 kr. pr.
+                            person</li>
+                        <li>En æske Haute Couture Candy til at nyde under dit ophold</br>250 kr</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="images ten-col">
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/dine1.jpeg">
+            </div>
+            <div class="hor">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/dine2.jpeg">
+                <img class="lazyload draw nine" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_10.png">
+            </div>
+            <div class="space2">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/dine3.jpeg">
+            </div>
+        </section>
+
+        <section class="two-col point" id="dining">
+            <div class="en">
+                <h2 class="title">Dining - Augusta’s Feast</h2>
+                <div>
+                    <h3>Lunch</h3>
+                    <p>You arrive at Skovhaven, lunch is ready, the table is beautifully set and I have been looking
+                        forward to welcoming you. You will be having some of my tasteful signature dishes while enjoying
+                        the view of the lake. After lunch you can explore the nearby lakeshore of Skarresø or go for a
+                        walk in the forest. In the afternoon I will serve you coffee and sweets, before sending you on
+                        your way back home.</p>
+                    <h3>Details</h3>
+                    <p>
+                    <ul>
+                        <li>Arrival at 12.00</li>
+                        <li>Goodbye at 17.00</li>
+                        <li>Price DKK 580 per person</li>
+                        <li>Drinks are purchased in Skovhaven - drinks are purchased in Skovhaven</li>
+                        <li>Lunch requires 8 guests</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>Dinner</h3>
+                    <p>YYou arrive at Skovhaven at dusk where I will be greeting you at the door. From the kitchen,
+                        intriguing aromas and mysterious stories slowly fill the air. No two evenings are alike in
+                        Skovhaven and the evening menus are always created based on a performative and experimental
+                        principle. Here you get the chance to let new ideas develop, while carefully curated tastes,
+                        aromas and textures lure you into my food universe.</p>
+                    <h3>Details</h3>
+                    <p>
+                    <ul>
+                        <li>Arrival at 16.00</li>
+                        <li>Goodbye at 21.00</li>
+                        <li>Price DKK 800 per person</li>
+                        <li>Drinks are purchased in Skovhaven - drinks are purchased in Skovhaven</li>
+                        <li>Dinner requires 8 guests</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="dk">
+                <h2 class="title ">Augusta’s Gæstebud</h2>
+                <div>
+                    <h3>En Frokost</h3>
+                    <p>I ankommer til skovhaven, frokostbordet er overdådigt dækket og jeg har glædet mig til at tage
+                        imod jer. I er 8 gæster, så spisebordet er fyldt op. I præsenteres for nogle af mine smagsfyldte
+                        klassikere og kan slå mave til udsigten over søen eller gå en tur i skoven. Om eftermiddagen
+                        serverer jeg sødt til kaffen inden i drager hjem igen.</p>
+                    <h3>Detaljer</h3>
+                    <p>
+                    <ul>
+                        <li>Ankomst kl. 12.00</li>
+                        <li>Afsked kl. 17.00</li>
+                        <li>Pris 580 kr. pr. person</li>
+                        <li>Pris 580 kr. pr. person - drikkevarer tilkøbes i Skovhaven</li>
+                        <li>Frokosten kræver 8 gæster</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h3>En Middag</h3>
+                    <p>I ankommer til Skovhaven ved skumringen, jeg tager imod jer i døren. Scenen er sat, I skal
+                        forkæles og lokkes dybt ind i mit madunivers. Ingen aftener er ens i Skovhaven, aftenmenuerne
+                        skabes altid ud fra et performativt og eksperimenterende princip. Det er her nye ideer kan få
+                        lov at udvikle sig og I som gæster er med i denne skabelse.</p>
+                    <h3>Detaljer</h3>
+                    <p>
+                    <ul>
+                        <li>Ankomst kl. 16.00</li>
+                        <li>Afsked kl. 21.00</li>
+                        <li>Pris 800 kr. pr. person - drikkevarer tilkøbes i Skovhaven</li>
+                        <li>Drikkevarer tilkøbes i Skovhaven</li>
+                        <li>Middagen kræver 8 gæster</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="images ten-col">
+            <div class="space1">
+
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/reserve1.jpeg">
+                <img class="lazyload draw ten" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_12.png">
+            </div>
+
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/reserve2c.jpeg">
+            </div>
+            <div class="space1">
+            </div>
+            <div class="ver">
+                <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/reserve3b.jpeg">
+                    <img class="lazyload draw eleven" data-sizes="auto" src="/assets/images/placeholder.png"
+                    data-src="/assets/images/drawings/line_13.png">
+            </div>
+        </section>
+
+        <section class="two-col point" id="reserve">
+            <div class="en">
+                <h2 class="title">Reservation</h2>
+                <div>
+                    <p>To make a reservation please send me an email containing your desired date(s), number of guests
+                        and which experience you want.</p>
+                    <a href="mailto:augusta@augustasorensen.com">
+                        <h2 class="button">Make a reservation</h2>
+                    </a>
+                </div>
+                <div>
+                    <h3>How to get to Skovhaven</h3>
+                    <p><a target="_blank"
+                            href="https://www.google.com/maps/place/Møllevej+8,+4450+Jyderup/@55.643011,11.3681963,17z/data=!3m1!4b1!4m5!3m4!1s0x464d78e808611cd3:0xb2b4ace5b753bbbc!8m2!3d55.643008!4d11.370385">Skovhaven
+                            By Augusta, Møllevej 8b, 4450 Jyderup</a></p>
+                    <p>If you arrive by car, Augusta will send you a secret route through the forest to Skovhaven, as
+                        soon as she has received your reservation.</p>
+                    <p>If you arrive by train to Jyderup, you can either walk the beautiful trip along Skarresø, through
+                        the rolling hills or be picked up at the station.</p>
+                </div>
+                <div>
+                    <h3>Payment & cancellation</h3>
+                    <p>Your stay must be prepaid when booking. If canceled 14 days before arrival, 50% will be refunded.
+                        If canceled later, full price will be charged.</p>
+                </div>
+                <div>
+                    <p>In case of illness, contact your travel insurance.</p>
+                    <p>You are always welcome to give your stay to others if you are prevented from going. I just ask
+                        that you please inform me about any changes before the date of arrival.</p>
+                </div>
+            </div>
+            <div class="dk">
+                <h2 class="title">Reservation</h2>
+                <div>
+                    <p>For at fortage en reservation bedes du sende mig en e-mail med dine ønskede datoer, antal gæster
+                        og hvilken oplevelse du ønsker.</p>
+                    <a href="mailto:augusta@augustasorensen.com">
+                        <h2 class="button">Make a reservation</h2>
+                    </a>
+                </div>
+                <div>
+                    <h3>Hvordan kommer man til Skovhaven</h3>
+                    <p><a target="_blank"
+                            href="https://www.google.com/maps/place/Møllevej+8,+4450+Jyderup/@55.643011,11.3681963,17z/data=!3m1!4b1!4m5!3m4!1s0x464d78e808611cd3:0xb2b4ace5b753bbbc!8m2!3d55.643008!4d11.370385">Skovhaven
+                            By Augusta, Møllevej 8b, 4450 Jyderup</a></p>
+                    <p>Ankommer du i bil, sender Augusta dig en hemmelig rute gennnem skoven til Skovhaven, så snart hun
+                        har modtaget din reservation.</p>
+                    <p>Ankommer du med tog til Jyderup, kan du enten vandre den smukke tur langs Skarresø, gennem dal og
+                        bakker eller blive hentet på stationen.</p>
+                </div>
+                <div>
+                    <h3>Betaling & afbestilling</h3>
+                    <p>Dit ophold forudbetales ved reservation. Ved afbestilling 14 dage før ankomst refunderes 50%. Ved
+                        afbestilling senere betales fuld pris.</p>
+                </div>
+                <div>
+                    <p>Ved sygdom kontakt din rejseforsikring.</p>
+                    <p>Du er altid velkommen til at forære dit ophold til andre, hvis du bliver forhindret, du bør blot
+                        informere om dette inden ankomsten.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <img class="lazyload" data-sizes="auto" src="/assets/images/placeholder.png"
+                data-src="/assets/images/drawings/signoff.png">
+            <div class="links">
+                <h2>
+                    <a href="mailto:mailto:augusta@augustasorensen.com">Email</a>
+                    <a href="https://www.instagram.com/skovhaven_byaugusta/">Instagram</a>
+                </h2>
+            </div>
+        </footer>
+
+
     </div>
 
+    <script type="text/javascript" src="/assets/js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
 </body>
 
 </html>
