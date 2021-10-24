@@ -211,26 +211,16 @@ section.drawings {
         pointer-events: none;
         position: absolute;
         &#one {
-            left: 30%;
-            transform: rotate(-80deg);
-            bottom: -46%;
-            height: 801px;
-        }
-        &#two {
             left: 5px;
             transform: rotate(180deg);
             top: 70px;
             height: 80px;
         }
-        &#three {
-            left: 50%;
-            top: 18%;
-            height: 169px;
-        }
-        &#four {
-            left: 1%;
-            top: 10%;
-            height: 12%;
+        &#two {
+            right: 340px;
+            transform: rotate(180deg);
+            top: 20px;
+            height: 100px;
         }
     }
 }
@@ -268,62 +258,62 @@ section.images.ten-col {
             &.one {
                 bottom: -80px;
                 right: -40px;
-                width: 35%;
+                width: 120px;
             }
             &.two {
-                bottom: -100px;
-                right: -80px;
-                width: 50%;
+                top: -80px;
+                right: -60px;
+                width: 120px;
             }
             &.three {
-                width: 60%;
+                width: 85px;
                 bottom: 0;
                 left: 0;
             }
             &.four {
-                width: 50%;
-                bottom: 0;
-                left: 0;
+                width: 85px;
+                bottom: -30px;
+                right: -40px;
             }
             &.five {
-                width: 60%;
-                bottom: 0;
+                width: 90px;
+                bottom: -50px;
                 left: 0;
             }
             &.six {
-                width: 85%;
+                width: 360px;
                 top: -45px;
-                left: 20px; 
+                right: 20px; 
             }
             &.seven {
-                width: 50%;
-                top: -35px;
-                left: 20px; 
-            }
-            &.eight {
-                width: 210%;
-                top: -35px;
-                left: 20px; 
-            }
-            &.nine {
-                width: 90%;
+                width: 90px;
                 top: -35px;
                 right: -100px; 
             }
+            &.eight {
+                width: 350px;
+                top: -35px;
+                right: 20px; 
+            }
+            &.nine {
+                width: 170px;
+                top: -35px;
+                left: -100px; 
+            }
             &.ten {
-                width: 240%;
+                width: 150px;
                 top: -35px;
                 right: -100px; 
             }
             &.eleven {
-                width: 320%;
-                top: -260px;
+                width: 200px;
+                top: -20px;
                 right: 10px; 
             }
             &.twelve {
-                width: 110%;
-                bottom: -200px;
-                right: 10px; 
+                width: 60px;
+                bottom: 30px;
+                left: -100px; 
             }
         }
         &.hor {
@@ -371,17 +361,47 @@ footer {
 }
 
 @media (max-width: 1000px) {
+
+    section.two-col {
+        grid-template-columns: 1fr;
+    }
     section.menu {
-        margin-top: 50px;
-        right: 0;
+        margin-top: 80px;
         .toggle {
             display: flex !important;
+        }
+        div {
+            justify-self: auto;
+            width: auto;
+            
+        }
+    }
+
+    section.drawings {
+        img {
+            pointer-events: none;
+            position: absolute;
+            &#one {
+                left: auto;
+                right: 5px;
+                transform: rotate(180deg);
+                top: 5px;
+                height: 65px;
+            }
+            &#two {
+                display: none;
+            }
         }
     }
 
     .dk {
         display: none;
     }
+
+    .en, .dk {
+        width: 100%;
+    }
+    
 
     .content {
         margin-top: 310px;
@@ -407,67 +427,37 @@ footer {
                 z-index: 100;
                 margin: 0 auto;
                 &.one {
-                    right: 20px;
-                    width: 25%;
-                    z-index: 100;
+                    right: 30px;
                 }
                 &.two {
-                    bottom: -100px;
-                    left: 0;
-                    width: 25%;
-                }
-                &.three {
-                    width: 40%;
-                    bottom: 0;
-                    left: 0;
+                    left: -30px;
                 }
                 &.four {
-                    width: 45%;
-                    bottom: 0;
-                    left: 0;
-                }
-                &.five {
-                    width: 50%;
-                    bottom: 0;
-                    right: -20px;
+                    right:30px;
                 }
                 &.six {
-                    width: 75%;
-                    top: -45px;
-                    left: 20px; 
+                    left: 0;
                 }
                 &.seven {
-
-                    width: 40%;
-                    top: -35px;
-                    left: 20px; 
+                    right: 20px;
                 }
                 &.eight {
-                    width: 160%;
-                    top: -35px;
-                    left: 20px; 
+                    left:-40px;
                 }
                 &.nine {
-                    width: 70%;
-                    top: -35px;
-                    right: -100px; 
+                    left: 0;
                 }
                 &.ten {
-                    width: 170%;
-                    top: -35px;
-                    right: -100px; 
-                }
-                &.eleven {
-                    width: 20%;
-                    top: -260px;
-                    right: 10px; 
+                    right: auto;
+                    left: 10px;
                 }
                 &.twelve {
-                    width: 70%;
-                    bottom: -200px;
-                    right: 10px; 
+                    left: -20px;
                 }
 
+                &.space1, .space2, .space4 {
+                    display: none;
+                }
             }
         }
 
