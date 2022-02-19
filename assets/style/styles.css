@@ -492,6 +492,14 @@ footer a {
   .content .en.fade {
     opacity: 1;
   }
+  .menu .dk.fade,
+  .menu .en.fade {
+    border: 1px solid black;
+  }
+  .menu .dk.fade a,
+  .menu .en.fade a {
+    color: black !important;
+  }
   section.images.ten-col {
     display: -webkit-box;
     display: -ms-flexbox;

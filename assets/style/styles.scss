@@ -360,6 +360,9 @@ footer {
     }
 }
 
+
+// Mobile
+
 @media (max-width: 1000px) {
 
     section.two-col {
@@ -400,6 +403,7 @@ footer {
 
     .en, .dk {
         width: 100%;
+        
     }
     
 
@@ -414,6 +418,18 @@ footer {
         .en {
             &.fade {
                 opacity: 1;
+            }
+        }
+    }
+
+    .menu {
+        .dk,
+        .en {
+            &.fade {
+                border: 1px solid rgba(0, 0, 0, 1);
+                a {
+                    color: rgba(0, 0, 0, 1) !important;
+                }
             }
         }
     }
