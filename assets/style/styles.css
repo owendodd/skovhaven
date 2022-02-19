@@ -538,6 +538,7 @@ footer a {
   section.images.ten-col div img.ten {
     right: auto;
     left: 10px;
+    display: none;
   }
   section.images.ten-col div img.twelve {
     left: -20px;
