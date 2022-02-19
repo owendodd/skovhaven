@@ -488,6 +488,10 @@ footer a {
   .content section.two-col div {
     grid-column: span 2;
   }
+  .content .dk.fade,
+  .content .en.fade {
+    opacity: 1;
+  }
   section.images.ten-col {
     display: -webkit-box;
     display: -ms-flexbox;
