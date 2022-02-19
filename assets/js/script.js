@@ -16,8 +16,28 @@ $(window).scroll(function () {
     }
 });
 
-menuBox.mouseenter(function () {
-    showMenu();
+
+$(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+    
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 1000) {
+            menuBox.click(function () {
+                showMenu();
+            });
+        }
+        else
+        {
+            menuBox.mouseenter(function () {
+                showMenu();
+            });
+        }
+    }
 });
 
 function hideMenu() {
